@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import 'home_page.dart';
 
@@ -12,13 +11,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      title: 'Flutter Demo',
+    return MaterialApp(
+      title: 'Flutter Example Nav bar animations. By Leonardo Serrano',
       debugShowCheckedModeBanner: false,
-      getPages: [
-        GetPage(name: '/', page: () => const HomePage()),
-      ],
-      initialRoute: '/',
       theme: ThemeData(
         brightness: Brightness.dark,
         textTheme: const TextTheme(
@@ -26,6 +21,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       themeMode: ThemeMode.dark,
+      home: const HomePage(),
     );
   }
 }
